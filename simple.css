@@ -23,6 +23,13 @@ nav a:hover { color:#000; text-decoration:underline; text-underline-offset:4px; 
 .authors span { font-size:14px; font-weight:500; }
 sup { color:inherit; font-size:.7em; }
 .affiliations { margin:10px 0 0; color:var(--muted); font-size:11px; }
+.affiliations-logos { display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:18px 32px; margin:20px auto 0; max-width:860px; }
+.affiliations-logos img { display:block; height:38px; width:auto; object-fit:contain; opacity:.92; transition:opacity .18s; }
+.affiliations-logos img:hover { opacity:1; }
+.affiliations-logos img.logo-shanghaitech { height:40px; }
+.affiliations-logos img.logo-bza { height:36px; }
+.affiliations-logos img.logo-nus { height:42px; }
+.affiliations-logos img.logo-kepler { height:20px; }
 .paper-links { display:flex; justify-content:center; gap:10px; margin-top:22px; }
 .pill-link { display:flex; align-items:center; gap:7px; padding:8px 13px; border:1px solid #aaa; border-radius:4px; font-size:11px; font-weight:600; text-decoration:none; }
 .pill-link:hover { background:var(--soft); }
@@ -162,6 +169,11 @@ footer { color:#666; background:#fff; border-top:1px solid var(--line); }
   .section-shell { width:min(100% - 28px,1000px); }
   .site-header { height:58px; padding-inline:14px; } .header-cta { font-size:0; }
   .hero h1 { font-size:34px; } .hero-deck { font-size:14px; } .authors span { font-size:12px; }
+  .affiliations-logos { gap:14px 22px; }
+  .affiliations-logos img.logo-shanghaitech { height:32px; }
+  .affiliations-logos img.logo-bza { height:28px; }
+  .affiliations-logos img.logo-nus { height:34px; }
+  .affiliations-logos img.logo-kepler { height:16px; }
   .hero-video-shell { aspect-ratio:4/3; } .action-copy { grid-template-columns:1fr; }
 }
 @media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; animation-duration:.01ms!important; transition-duration:.01ms!important; } }
