@@ -29,6 +29,7 @@ sup { color:inherit; font-size:.7em; }
 .affiliations-logos img.logo-shanghaitech { height:40px; }
 .affiliations-logos img.logo-bza { height:36px; }
 .affiliations-logos img.logo-nus { height:42px; }
+.affiliations-logos img.logo-sjtu { height:44px; }
 .affiliations-logos img.logo-kepler { height:20px; }
 .paper-links { display:flex; justify-content:center; gap:10px; margin-top:22px; }
 .pill-link { display:flex; align-items:center; gap:7px; padding:8px 13px; border:1px solid #aaa; border-radius:4px; font-size:11px; font-weight:600; text-decoration:none; }
@@ -173,6 +174,7 @@ footer { color:#666; background:#fff; border-top:1px solid var(--line); }
   .affiliations-logos img.logo-shanghaitech { height:32px; }
   .affiliations-logos img.logo-bza { height:28px; }
   .affiliations-logos img.logo-nus { height:34px; }
+  .affiliations-logos img.logo-sjtu { height:36px; }
   .affiliations-logos img.logo-kepler { height:16px; }
   .hero-video-shell { aspect-ratio:4/3; } .action-copy { grid-template-columns:1fr; }
 }
