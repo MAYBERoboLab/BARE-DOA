@@ -125,9 +125,13 @@ const supportsCustomFullscreen = Boolean(document.fullscreenEnabled && Element.p
 if (supportsCustomFullscreen) {
   document.documentElement.classList.add("custom-video-fullscreen");
   document.querySelectorAll(".combined-video-shell video").forEach((video) => {
-    video.setAttribute("controlslist", "nofullscreen");
+    video.setAttribute("controlslist", "nodownload nofullscreen");
   });
 }
+
+document.addEventListener("contextmenu", (event) => {
+  if (event.target.closest("video")) event.preventDefault();
+});
 
 document.addEventListener("click", (event) => {
   const button = event.target.closest(".video-fullscreen");
@@ -156,7 +160,7 @@ function makeActionCard(action, cardIndex) {
   article.style.setProperty("--card-delay", `${cardIndex * 70}ms`);
   article.innerHTML = `
     <div class="action-video">
-      <video muted loop playsinline controls preload="metadata" poster="${action.poster}">
+      <video muted loop playsinline controls controlslist="nodownload" preload="metadata" poster="${action.poster}">
         <source src="${firstClip.src}" type="video/mp4">
       </video>
       <span class="speed-badge">Speed: 1x</span>
@@ -176,7 +180,7 @@ function makeActionCard(action, cardIndex) {
     </div>`;
 
   const video = article.querySelector("video");
-  if (supportsCustomFullscreen) video.setAttribute("controlslist", "nofullscreen");
+  if (supportsCustomFullscreen) video.setAttribute("controlslist", "nodownload nofullscreen");
   const label = article.querySelector(".playing-label");
   article.querySelectorAll(".clip-button").forEach((button) => {
     button.addEventListener("click", () => {
